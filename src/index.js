@@ -8,7 +8,18 @@ import connectDB from "./db/index.js";
 
 
 dotenv.config({ path: './.env' })
-connectDB()
+connectDB().then((res)=>{
+
+  app.listen(process.env.PORT||8000,()=>{
+    console.log(`sever is running at port:${process.env.PORT}`)
+  })
+
+}).catch((error)=>{
+
+  console.log("MONGODB connection failed !!",error)
+
+
+})
 
 
 

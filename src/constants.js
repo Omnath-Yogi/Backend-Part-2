@@ -1,1 +1,1 @@
-export const DB_NAME ="Baidu"
+export const DB_NAME ="Clipo"
